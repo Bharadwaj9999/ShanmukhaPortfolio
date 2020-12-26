@@ -13,8 +13,10 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 import { ProfileComponent } from './portfolio/profile/profile.component';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NavbarCertificationsComponent } from './portfolio/navbar-certifications/navbar-certifications.component';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { ProfileComponent } from './portfolio/profile/profile.component';
     NavbarExperienceComponent,
     NavbarQualificationsComponent,
     PortfolioComponent,
-    ProfileComponent
+    ProfileComponent,
+    NavbarCertificationsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,10 +39,8 @@ import { ProfileComponent } from './portfolio/profile/profile.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SnotifyModule  ],
+  NgbModule],
   providers: [
-    { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
-    SnotifyService,
   ],
   bootstrap: [AppComponent]
 })
